@@ -11,8 +11,8 @@ class Passage:
 
 def read_document(path):
     p = Path(path)
-    if p.stat().st_size > 25 * 1024 * 1024:
-        raise ValueError('文件超过 25 MB，请拆分后导入')
+    if p.stat().st_size > 300 * 1024 * 1024:
+        raise ValueError('文件超过 300 MB，请拆分后导入')
     result = []
     def add(loc, text):
         if text and str(text).strip():
